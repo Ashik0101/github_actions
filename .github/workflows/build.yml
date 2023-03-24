@@ -1,7 +1,7 @@
 on:
   push:
 jobs:
-  second-job:
+  third-job:
     runs-on: [windows-latest, macos-latest, ubuntu-latest]
     steps:
       - name: Check node version
@@ -9,4 +9,5 @@ jobs:
       - name: Check npm version
         run: npm --version
       - uses: actions/checkout@v3
+      - run: npm install
       - run: node index.js
